@@ -50,6 +50,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'web_game.urls'
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
