@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body class="h-100" style="background-color: darkslategrey">
 {% block content %}
 {% endblock content %}
 </body>
