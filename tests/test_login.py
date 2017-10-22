@@ -56,3 +56,13 @@ def is_login_page(django_browser):
 @then('I am successfully logged in and directed to the home page')
 def is_logged_in(django_browser):
     assert django_browser.url == '/'
+
+
+@then('I remain on the login page')
+def on_login_page(django_browser):
+    assert django_browser.url == '/login/'
+
+
+@then(parsers.parse('an error message \'{error_message}\' is displayed'))
+def error_message_displayed(error_message, django_browser):
+    assert django_browser.is_text_present(error_message)
